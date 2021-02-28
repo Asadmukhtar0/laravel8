@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use app\Http\Controllers;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,5 +20,11 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::middleware(['auth'])->group(function(){
+    Route::get('/student','App\Http\Controllers\studentController@index')->name('add.student');
+    Route::get('/badge','App\Http\Controllers\badgeController@index')->name('badge');
+    Route::get('/teacher','App\Http\Controllers\teacherController@index')->name('teacher');
+});
 
 require __DIR__.'/auth.php';

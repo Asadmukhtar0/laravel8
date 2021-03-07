@@ -15,7 +15,6 @@ class usersController extends Controller
             'token'    => 'sadasdasdasdgasjkfgfsadg',
             'response' => $users
         ];
-        //return $users;
         return response()->json($data);
     }
 }

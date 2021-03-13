@@ -30,5 +30,5 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/teacher','App\Http\Controllers\teacherController@index')->name('teacher');
     Route::post('/teacher','App\Http\Controllers\teacherController@store')->name('teacher.store');
 });
-
+Route::get('send-email','App\Http\Controllers\mailController@html_email');
 require __DIR__.'/auth.php';

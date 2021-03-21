@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class teacher extends Model
 {
     use HasFactory;
+    public function badge(){
+        return $this->hasOne(badge::class);
+    }
 }

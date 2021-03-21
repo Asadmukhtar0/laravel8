@@ -24,7 +24,7 @@
                                 {{ $badge->title }}
                             </td>
                             <td>
-                                {{ $badge->teacher_id }}
+                                {{ $badge->teacher }}
                             </td>
                             <td>
                                 <a href="{{ route('badge.search', $badge->id) }}">

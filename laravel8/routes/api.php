@@ -14,4 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/users','App\Http\Controllers\api\usersController@users');
-
+Route::get('/teachers','App\Http\Controllers\api\teacherController@teachers');
+Route::post('/add/teachers','App\Http\Controllers\api\teacherController@add');
+Route::get('/teacher/{id}','App\Http\Controllers\api\teacherController@teacher');

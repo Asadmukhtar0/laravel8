@@ -41,9 +41,11 @@
                                 </button>
                             </td>
                             <td>
-                                <button class="btn btn-danger">
-                                    Delete
-                                </button>
+                                <a href="{{ route('teacher.delete',$teacher->id) }}">
+                                    <button class="btn btn-danger">
+                                        Delete
+                                    </button>
+                                </a>
                             </td>
                         </tr>
                     @endforeach

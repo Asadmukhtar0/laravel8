@@ -29,6 +29,7 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/badge','App\Http\Controllers\badgeController@store')->name('badge.store');
     Route::get('/teacher','App\Http\Controllers\teacherController@index')->name('teacher');
     Route::post('/teacher','App\Http\Controllers\teacherController@store')->name('teacher.store');
+    Route::get('/teachers/delete/{id}','App\Http\Controllers\teacherController@del')->name('teacher.delete');
 });
 Route::get('send-email','App\Http\Controllers\mailController@html_email');
 require __DIR__.'/auth.php';
